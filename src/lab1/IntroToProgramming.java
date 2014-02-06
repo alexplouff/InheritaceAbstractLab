@@ -3,8 +3,10 @@ package lab1;
 import javax.swing.JOptionPane;
 
 /**
- * Describe responsibilities here. NOTE: this class has NO PREREQUISITES!
- * Do not change this fact.
+ * The purpose of this class is to declare the properties, write the appropriate
+ * getters/setters, and override the toString method for the Intro to Programming Course
+ * 
+ * This Course has no prerequisite
  *
  * @author      Alex Plouff
  * @version     1.00
@@ -20,7 +22,7 @@ public class IntroToProgramming extends ProgrammingCourse {
     
     @Override
     public void setCourseName(String courseName){
-        if( this.courseName.length() < 4 ){
+        if( courseName.length() < 4 ){
             System.out.println("Course Name Must Be Atleast Four Characters");
         }
             
@@ -61,7 +63,7 @@ public class IntroToProgramming extends ProgrammingCourse {
                     "Error: credits must be in the range 0.5 to 4.0");
             System.exit(0);
         }
-        this.setCourseCredits(credits);
+        this.credits = credits;
     }
     
     public double getCourseCredits(){

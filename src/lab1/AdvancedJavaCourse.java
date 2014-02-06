@@ -3,8 +3,11 @@ package lab1;
 import javax.swing.JOptionPane;
 
 /**
- * Describe responsibilities here.
- *
+ * The purpose of this class is to declare the properties, write the appropriate
+ * getters/setters, and override the toString method for the Advanced Java Course
+ * 
+ * This Course has two prerequisites
+ * 
  * @author      Alex Plouff
  * @version     1.00
  */

@@ -22,9 +22,9 @@ public class StartUp {
          introPro.setCourseName("intro to programming");
          introPro.setCourseNumber(101);
          introPro.setCourseCredits(3.0);
-         introPro.setPrerequisites(null);
+         introPro.setPrerequisites("None");
          
-         System.out.println(introPro.toString());
+         System.out.println(introPro.toString() + "\n \n");
          
          ProgrammingCourse javaIntro = new AdvancedJavaCourse();
          

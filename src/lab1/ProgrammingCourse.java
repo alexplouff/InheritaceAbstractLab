@@ -5,36 +5,67 @@
 
 package lab1;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Alex
  */
 public abstract class ProgrammingCourse {
     
-    private String courseName;
+    private String courseName, prerequisites;
     private int courseNumber;
+    private double credits;
+    
     
     public void setCourseName(String courseName){
+        if( courseName.length() < 4 ){
+            System.out.println("Course Name Must Be Atleast Four Characters");
+        }
+            
         this.courseName = courseName;
     }
+    
     public String getCourseName(){
-        return courseName;
+        return courseName.toUpperCase();
     }
-  
-    public void setCourseNumber(int courseNumber) {
+    
+    public void setCourseNumber(int courseNumber){
         this.courseNumber = courseNumber;
     }
-    public int getCourseNumber(){
+   
+    public int getCourseNumber() {
         return courseNumber;
     }
     
-    public abstract void setPrerequisites(String prerequisites);
+    
+    public void setPrerequisites(String prerequisites) {
+        if(prerequisites == null || prerequisites.length() == 0) {
+            JOptionPane.showMessageDialog(null,
+                    "Error: prerequisites cannot be null of empty string");
+            System.exit(0);
+        }
+        this.prerequisites = prerequisites;
+    }
+    
+    // Preqrequisite getter is a abstract method and is located underneath
+    
+    public void setCourseCredits(double credits) {
+        if(credits < 0.5 || credits > 4.0) {
+            JOptionPane.showMessageDialog(null,
+                    "Error: credits must be in the range 0.5 to 4.0");
+            System.exit(0);
+        }
+        this.credits = credits;
+    }
+    
+    public double getCourseCredits(){
+        return credits;
+    }  
+    
+    //Abstract methods
     
     public abstract String getPrerequisites();
-    
-    public abstract void setCourseCredits(double credits);
-    
-    public abstract double getCourseCredits();   
     
     @Override
     public abstract String toString();

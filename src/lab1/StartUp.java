@@ -19,6 +19,10 @@ public class StartUp {
          
          ProgrammingCourse introPro = new IntroToProgramming();
          
+         ProgrammingCourse javaIntro = new AdvancedJavaCourse();
+         
+         ProgrammingCourse aJc = new AdvancedJavaCourse();
+         
          introPro.setCourseName("intro to programming");
          introPro.setCourseNumber(101);
          introPro.setCourseCredits(3.0);
@@ -26,7 +30,6 @@ public class StartUp {
          
          System.out.println(introPro.toString() + "\n \n");
          
-         ProgrammingCourse javaIntro = new AdvancedJavaCourse();
          
          javaIntro.setCourseName("Intro To Java");
          javaIntro.setCourseNumber(102);
@@ -35,7 +38,6 @@ public class StartUp {
          
          System.out.println(javaIntro.toString() + "\n \n");
          
-         ProgrammingCourse aJc = new AdvancedJavaCourse();
 
          aJc.setCourseName("Advanced Java Course");
          aJc.setCourseNumber(103);

@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
  * @version     1.00
  */
 
-public class IntroToProgrammingCourse extends ProgrammingCourse {
+public class IntroToProgramming extends ProgrammingCourse {
    
     private String courseName;
     private int courseNumber;
@@ -19,7 +19,7 @@ public class IntroToProgrammingCourse extends ProgrammingCourse {
     
     
     public void setCourseName(String courseName){
-        if( this.courseName.length() > 4 ){
+        if( this.courseName.length() < 4 ){
             System.out.println("Course Name Must Be Atleast Four Characters");
         }
             
@@ -68,8 +68,8 @@ public class IntroToProgrammingCourse extends ProgrammingCourse {
         
         return 
                 "Course Name: " + getCourseName()+
-                "Course Number: " + getCourseNumber()+
-                "Credit Amount: " + getCourseCredits()+
-                "Prerequistie: " + getPrerequisites();                
+                "\nCourse Number: " + getCourseNumber()+
+                "\nCredit Amount: " + getCourseCredits()+
+                "\nPrerequistie: " + getPrerequisites();               
     }
 }

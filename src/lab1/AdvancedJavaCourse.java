@@ -17,7 +17,7 @@ public class AdvancedJavaCourse extends ProgrammingCourse{
     
     
     public void setCourseName(String courseName){
-        if( this.courseName.length() > 4 ){
+        if( courseName.length() < 4 ){
             System.out.println("Course Name Must Be Atleast Four Characters");
         }
             
@@ -55,7 +55,7 @@ public class AdvancedJavaCourse extends ProgrammingCourse{
                     "Error: credits must be in the range 0.5 to 4.0");
             System.exit(0);
         }
-        this.setCourseCredits(credits);
+        this.credits = credits;
     }
     
     public double getCourseCredits(){
@@ -66,9 +66,9 @@ public class AdvancedJavaCourse extends ProgrammingCourse{
         
         return 
                 "Course Name: " + getCourseName()+
-                "Course Number: " + getCourseNumber()+
-                "Credit Amount: " + getCourseCredits()+
-                "Prerequistie: " + getPrerequisites();
+                "\nCourse Number: " + getCourseNumber()+
+                "\nCredit Amount: " + getCourseCredits()+
+                "\nPrerequistie: " + getPrerequisites();
         
               
                 

@@ -17,7 +17,7 @@ public class IntroJavaCourse extends ProgrammingCourse {
     
     
     public void setCourseName(String courseName){
-        if( this.courseName.length() > 4 ){
+        if( courseName.length() < 4 ){
             System.out.println("Course Name Must Be Atleast Four Characters");
         }
             
@@ -65,9 +65,9 @@ public class IntroJavaCourse extends ProgrammingCourse {
         
         return 
                 "Course Name: " + getCourseName()+
-                "Course Number: " + getCourseNumber()+
-                "Credit Amount: " + getCourseCredits()+
-                "Prerequistie: " + getPrerequisites();
+                "\nCourse Number: " + getCourseNumber()+
+                "\nCredit Amount: " + getCourseCredits()+
+                "\nPrerequistie: " + getPrerequisites();
       
     }
 }

@@ -15,15 +15,36 @@ public class StartUp {
     
      public static void main(String[] args) {
        
-         AdvancedJavaCourse aJc = new AdvancedJavaCourse();
-
-         aJc.setCourseName("Advanced Java Programming");
-         aJc.setCourseNumber(301);
-         aJc.setCourseCredits(4);
-         aJc.setPrerequisites("Intro to prgramming");
          
-         aJc.toString();
+         
+         ProgrammingCourse introPro = new IntroToProgramming();
+         
+         introPro.setCourseName("intro to programming");
+         introPro.setCourseNumber(101);
+         introPro.setCourseCredits(3.0);
+         introPro.setPrerequisites(null);
+         
+         System.out.println(introPro.toString());
+         
+         ProgrammingCourse javaIntro = new AdvancedJavaCourse();
+         
+         javaIntro.setCourseName("Intro To Java");
+         javaIntro.setCourseNumber(102);
+         javaIntro.setCourseCredits(4.0);
+         javaIntro.setPrerequisites("Intro To Pogramming");
+         
+         System.out.println(javaIntro.toString() + "\n \n");
+         
+         ProgrammingCourse aJc = new AdvancedJavaCourse();
+
+         aJc.setCourseName("Advanced Java Course");
+         aJc.setCourseNumber(103);
+         aJc.setCourseCredits(4);
+         aJc.setPrerequisites("Intro to Prgramming" + "\n"
+                            + "Intro to Java");
+         
+         System.out.println(aJc.toString());
          
     }
-    
+        
 }

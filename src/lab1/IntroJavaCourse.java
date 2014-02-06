@@ -10,7 +10,7 @@ package lab1;
  */
 public class IntroJavaCourse extends ProgrammingCourse  {
     
-        public String getPrerequisites(){
+    public String getPrerequisites(){
         return "Intro To Programming, 102";
     }
     

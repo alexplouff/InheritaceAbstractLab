@@ -19,23 +19,17 @@ public abstract class ProgrammingCourse {
     private double credits;
     
     
-    public void setCourseName(String courseName){
-        if( courseName.length() < 4 ){
-            System.out.println("Course Name Must Be Atleast Four Characters");
-        }
-            
-        this.courseName = courseName;
-    }
+
     
-    public String getCourseName(){
+    public abstract void setCourseName(String courseName);
+    
+    public final String getCourseName(){
         return courseName.toUpperCase();
     }
     
-    public void setCourseNumber(int courseNumber){
-        this.courseNumber = courseNumber;
-    }
+    public abstract void setCourseNumber(int courseNumber);
    
-    public int getCourseNumber() {
+    public final int getCourseNumber() {
         return courseNumber;
     }
     
@@ -49,7 +43,7 @@ public abstract class ProgrammingCourse {
         this.prerequisites = prerequisites;
     }
     
-    // Preqrequisite getter is a abstract method and is located underneath
+    public abstract String getPrerequisites();
     
     public void setCourseCredits(double credits) {
         if(credits < 0.5 || credits > 4.0) {
@@ -60,13 +54,9 @@ public abstract class ProgrammingCourse {
         this.credits = credits;
     }
     
-    public double getCourseCredits(){
+    public final double getCourseCredits(){
         return credits;
     }  
-    
-    //Abstract methods
-    
-    public abstract String getPrerequisites();
     
     @Override
     public abstract String toString();

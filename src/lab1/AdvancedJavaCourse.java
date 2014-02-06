@@ -11,6 +11,23 @@ package lab1;
  */
 public class AdvancedJavaCourse extends ProgrammingCourse{
 
+    
+     public void setCourseName(String courseName){
+        if( courseName.length() < 4 ){
+            System.out.println("Course Name Must Be Atleast Four Characters");
+        }
+        
+        this.setCourseName(courseName);
+    }
+     
+     public void setCourseNumber(int courseNumber){
+        if( courseNumber < 100 || courseNumber > 999){
+                    System.out.println("Course Number must start higher than 100 and less than 999");
+        }
+        
+        this.setCourseNumber(courseNumber);
+    }
+         
      public String getPrerequisites(){
         return "Intro To Programming, 101 \n"
                 +"Intro To Java, 102";

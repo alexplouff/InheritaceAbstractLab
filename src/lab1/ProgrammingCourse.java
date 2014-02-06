@@ -12,17 +12,29 @@ package lab1;
  */
 public abstract class ProgrammingCourse {
     
-   
+    private String courseName;
+    private int courseNumber;
+    
+    public void setCourseName(String courseName){
+        this.courseName = courseName;
+    }
+    public String getCourseName(){
+        return courseName;
+    }
+  
+    public void setCourseNumber(int courseNumber) {
+        this.courseNumber = courseNumber;
+    }
+    public int getCourseNumber(){
+        return courseNumber;
+    }
+    
     public abstract void setPrerequisites(String prerequisites);
+    
     public abstract String getPrerequisites();
     
-    public abstract void setCourseName(String courseName);
-    public abstract String getCourseName();
-    
-    public abstract void setCourseNumber(int courseNumber);
-    public abstract int getCourseNumber();
-    
     public abstract void setCourseCredits(double credits);
+    
     public abstract double getCourseCredits();   
     
     @Override

@@ -18,6 +18,7 @@ public class IntroToProgramming extends ProgrammingCourse {
     private String prerequisites;
     
     
+    @Override
     public void setCourseName(String courseName){
         if( this.courseName.length() < 4 ){
             System.out.println("Course Name Must Be Atleast Four Characters");
@@ -26,14 +27,17 @@ public class IntroToProgramming extends ProgrammingCourse {
         this.courseName = courseName;
     }
     
+    @Override
     public String getCourseName(){
         return courseName.toUpperCase();
     }
     
+    @Override
     public void setCourseNumber(int courseNumber){
         this.courseNumber = courseNumber;
     }
     
+    @Override
     public int getCourseNumber() {
         return courseNumber;
     }

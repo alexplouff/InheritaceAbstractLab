@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
  * @author      your name goes here
  * @version     1.00
  */
-public class IntroToProgrammingCourse {
+public class IntroToProgramming implements ProgrammingCourse {
     
     private String courseName;
     private int courseNumber;
@@ -54,7 +54,7 @@ public class IntroToProgrammingCourse {
                     "Error: credits must be in the range 0.5 to 4.0");
             System.exit(0);
         }
-        this.setCourseCredits(credits);
+        this.credits = credits;
     }
     
     public double getCourseCredits(){

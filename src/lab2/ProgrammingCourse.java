@@ -26,8 +26,5 @@ public interface ProgrammingCourse {
     
     @Override
     public abstract String toString();
-
-}
-    
     
 }

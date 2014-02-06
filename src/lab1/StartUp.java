@@ -12,6 +12,18 @@ package lab1;
  */
 public class StartUp {
     
+    
+     public static void main(String[] args) {
+       
+         AdvancedJavaCourse aJc = new AdvancedJavaCourse();
 
+         aJc.setCourseName("Advanced Java Programming");
+         aJc.setCourseNumber(301);
+         aJc.setCourseCredits(4);
+         aJc.setPrerequisites("Intro to prgramming");
+         
+         aJc.toString();
+         
+    }
     
 }

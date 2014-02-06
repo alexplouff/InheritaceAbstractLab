@@ -51,16 +51,25 @@ public class IntroToProgrammingCourse extends ProgrammingCourse {
         return prerequisites;
     }
         
-    public void setCredits(double credits) {
+    public void setCourseCredits(double credits) {
         if(credits < 0.5 || credits > 4.0) {
             JOptionPane.showMessageDialog(null,
                     "Error: credits must be in the range 0.5 to 4.0");
             System.exit(0);
         }
-        this.setCredits(credits);
+        this.setCourseCredits(credits);
     }
     
-    public double getCredits(){
+    public double getCourseCredits(){
         return credits;
+    }
+    
+     public String toString(){
+        
+        return 
+                "Course Name: " + getCourseName()+
+                "Course Number: " + getCourseNumber()+
+                "Credit Amount: " + getCourseCredits()+
+                "Prerequistie: " + getPrerequisites();                
     }
 }

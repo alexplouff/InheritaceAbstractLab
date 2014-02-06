@@ -12,11 +12,7 @@ package lab1;
  */
 public abstract class ProgrammingCourse {
     
-    private String courseName;
-    private int courseNumber;
-    private double credits;
-    private String prerequisites;
-    
+   
     public abstract void setPrerequisites(String prerequisites);
     public abstract String getPrerequisites();
     
@@ -26,8 +22,10 @@ public abstract class ProgrammingCourse {
     public abstract void setCourseNumber(int courseNumber);
     public abstract int getCourseNumber();
     
-    public abstract void setCredits(double credits);
-    public abstract double getCredits();   
+    public abstract void setCourseCredits(double credits);
+    public abstract double getCourseCredits();   
     
-    
+    @Override
+    public abstract String toString();
+
 }

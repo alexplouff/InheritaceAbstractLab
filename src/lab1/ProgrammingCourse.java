@@ -1,5 +1,6 @@
 /*
  * This is the abstract class for the ProgrammingCourse sub-classes
+ * All methods are declard here with the toString and getPrerequisites as abstract
  * 
  */
 

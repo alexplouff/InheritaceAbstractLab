@@ -2,8 +2,7 @@ package lab1;
 
 
 /**
- * The purpose of this class is to declare the properties, write the appropriate
- * getters/setters, and override the toString method for the Advanced Java Course
+ * The purpose of this class is to override the toString/prerequisite method for the Intro to Java Course
  * 
  * This Course has two prerequisites
  * 

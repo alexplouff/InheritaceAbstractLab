@@ -11,21 +11,12 @@ import javax.swing.JOptionPane;
  */
 public class IntroToProgrammingCourse extends ProgrammingCourse {
 
-    private int courseNumber;
+    
     
     public IntroToProgrammingCourse(String courseName, int courseNumber, double credits ) {
         super(courseName, courseNumber, credits);
     }
 
-    @Override
-    public void setCourseNumber(int courseNumber) {
-        if( courseNumber == 0 || courseNumber != 101 ) {
-            JOptionPane.showMessageDialog(null,
-                    "Error: courseNumber cannot be null of empty string");
-            System.exit(0);
-        }
-     this.courseNumber = courseNumber;
-    }
     
     @Override
     public String toString(){

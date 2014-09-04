@@ -12,14 +12,11 @@ package lab2;
  */
 public interface ProgrammingCourse {
     
-    public abstract void setPrerequisites(String prerequisites);
-    public abstract String getPrerequisites();
-    
     public abstract void setCourseName(String courseName);
     public abstract String getCourseName();
     
-    public abstract void setCourseNumber(int courseNumber);
-    public abstract int getCourseNumber();
+    public abstract void setCourseNumber(String courseNumber);
+    public abstract String getCourseNumber();
     
     public abstract void setCourseCredits(double credits);
     public abstract double getCourseCredits();   

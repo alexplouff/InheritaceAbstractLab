@@ -15,35 +15,23 @@ public abstract class StartUp implements ProgrammingCourse {
     public static void main(String[] args) {
         
         
-         ProgrammingCourse introPro = new IntroToProgramming();
+         ProgrammingCourse introToProgramming = new IntroToProgrammingCourse( 
+                    "Intro To Programming" , "101" , 4);
          
-         ProgrammingCourse javaIntro = new AdvancedJavaCourse();
+         ProgrammingCourse javaIntro = new AdvancedJavaCourse(
+                    "Intro To Java" , "201" , 4 , "Intro To Programming");
          
-         ProgrammingCourse aJc = new AdvancedJavaCourse();
+         ProgrammingCourse aJc = new AdvancedJavaCourse(
+                    "Advanced Java Course" , "301" , 4 , 
+                    "Intro To Programming , Advanced Java");
+        
+         ProgrammingCourse [] courses = new ProgrammingCourse [3];
+         courses[0] = introToProgramming;
+         courses[1] = javaIntro;
+         courses[2] = aJc;
          
-         introPro.setCourseName("intro to programming");
-         introPro.setCourseNumber(101);
-         introPro.setCourseCredits(3.0);
-         introPro.setPrerequisites("None");
-         
-         System.out.println(introPro.toString() + "\n \n");
-         
-         
-         javaIntro.setCourseName("Intro To Java");
-         javaIntro.setCourseNumber(102);
-         javaIntro.setCourseCredits(4.0);
-         javaIntro.setPrerequisites("Intro To Pogramming");
-         
-         System.out.println(javaIntro.toString() + "\n \n");
-         
-
-         aJc.setCourseName("Advanced Java Course");
-         aJc.setCourseNumber(103);
-         aJc.setCourseCredits(4);
-         aJc.setPrerequisites("Intro to Prgramming" + "\n"
-                            + "Intro to Java");
-         
-         System.out.println(aJc.toString());
+         for( ProgrammingCourse course : courses )
+             System.out.println(course+"\n");
          
     }
 }

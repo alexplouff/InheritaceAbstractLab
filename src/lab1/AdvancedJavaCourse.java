@@ -1,45 +1,20 @@
 package lab1;
 
+import javax.swing.JOptionPane;
 
 /**
- * The purpose of this class is to override the toString/prerequisite method for the Intro to Java Course
- * 
- * This Course has two prerequisites
- * 
- * @author      Alex Plouff
+ * Describe responsibilities here.
+ *
+ * @author      your name goes here
  * @version     1.00
  */
-public class AdvancedJavaCourse extends ProgrammingCourse{
+public class AdvancedJavaCourse extends IntroJavaCourse {
+
+    public AdvancedJavaCourse(String courseName, int courseNumber,
+                                double credits, String prerequisite) {
+        super(courseName, courseNumber, credits, prerequisite);
+    }
 
     
-     public void setCourseName(String courseName){
-        if( courseName.length() < 4 ){
-            System.out.println("Course Name Must Be Atleast Four Characters");
-        }
-        
-        this.setCourseName(courseName);
-    }
-     
-     public void setCourseNumber(int courseNumber){
-        if( courseNumber < 100 || courseNumber > 999){
-                    System.out.println("Course Number must start higher than 100 and less than 999");
-        }
-        
-        this.setCourseNumber(courseNumber);
-    }
-         
-     public String getPrerequisites(){
-        return "Intro To Programming, 101 \n"
-                +"Intro To Java, 102";
-    }
     
-     public String toString(){
-        
-        return 
-                "Course Name: " + getCourseName()+
-                "\nCourse Number: " + getCourseNumber()+
-                "\nCredit Amount: " + getCourseCredits()+
-                "\nPrerequistie: " + getPrerequisites();               
-    }
-            
 }

@@ -17,36 +17,23 @@ public class StartUp {
        
          
          
-         ProgrammingCourse introPro = new IntroToProgramming();
+         ProgrammingCourse introToProgramming = new IntroToProgrammingCourse( 
+                            "Intro To Programming Course" , 101 , 4);
          
-         ProgrammingCourse javaIntro = new AdvancedJavaCourse();
+         ProgrammingCourse introToJava = new IntroJavaCourse(
+                            "Intro To Java" , 201 , 4 , "Intro To Programming");
          
-         ProgrammingCourse aJc = new AdvancedJavaCourse();
+         ProgrammingCourse advancedJava = new AdvancedJavaCourse(
+                            "Advanced Java " , 202 , 4 , "Intro To Java");
          
-         introPro.setCourseName("intro to programming");
-         introPro.setCourseNumber(101);
-         introPro.setCourseCredits(3.0);
-         introPro.setPrerequisites("None");
+         ProgrammingCourse [] courses = new ProgrammingCourse [3];
          
-         System.out.println(introPro.toString() + "\n \n");
+         courses[0] = introToProgramming;
+         courses[1] = introToJava;
+         courses[2] = advancedJava;
          
-         
-         javaIntro.setCourseName("Intro To Java");
-         javaIntro.setCourseNumber(102);
-         javaIntro.setCourseCredits(4.0);
-         javaIntro.setPrerequisites("Intro To Pogramming");
-         
-         System.out.println(javaIntro.toString() + "\n \n");
-         
-
-         aJc.setCourseName("Advanced Java Course");
-         aJc.setCourseNumber(103);
-         aJc.setCourseCredits(4);
-         aJc.setPrerequisites("Intro to Prgramming" + "\n"
-                            + "Intro to Java");
-         
-         System.out.println(aJc.toString());
-         
+         for(ProgrammingCourse c : courses)
+             System.out.println(c+"\n");
     }
         
 }

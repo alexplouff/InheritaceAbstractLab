@@ -14,37 +14,45 @@ import javax.swing.JOptionPane;
  */
 public abstract class ProgrammingCourse {
     
-    private String courseName, prerequisites;
+    private String courseName;
     private int courseNumber;
     private double credits;
     
-    
-
-    
-    public abstract void setCourseName(String courseName);
-    
-    public final String getCourseName(){
-        return courseName.toUpperCase();
+    public ProgrammingCourse( String courseName , int courseNumber
+                                    , double credits){
+        this.courseName = courseName;
+        this.courseNumber = courseNumber;
+        this.credits = credits;
     }
     
-    public abstract void setCourseNumber(int courseNumber);
+    //course name
+    public void setCourseName(String courseName) {
+        if( courseName == null){
+            System.out.println("Course Name Can NOT Be Empty");
+            System.exit(0);
+        }
+        this.courseName = courseName;
+    }
+    
+    public String getCourseName(){
+        return courseName;
+    }
+    
+    // course number
+    public void setCourseNumber(int courseNumber) {
+        if( courseNumber == 0 ) {
+            JOptionPane.showMessageDialog(null,
+                    "Error: courseNumber cannot be null of empty string");
+            System.exit(0);
+        }
+     this.courseNumber = courseNumber;
+    }
    
-    public final int getCourseNumber() {
+    public int getCourseNumber(){
         return courseNumber;
     }
     
-    
-    public void setPrerequisites(String prerequisites) {
-        if(prerequisites == null || prerequisites.length() == 0) {
-            JOptionPane.showMessageDialog(null,
-                    "Error: prerequisites cannot be null of empty string");
-            System.exit(0);
-        }
-        this.prerequisites = prerequisites;
-    }
-    
-    public abstract String getPrerequisites();
-    
+    // credits
     public void setCourseCredits(double credits) {
         if(credits < 0.5 || credits > 4.0) {
             JOptionPane.showMessageDialog(null,
@@ -54,11 +62,16 @@ public abstract class ProgrammingCourse {
         this.credits = credits;
     }
     
-    public final double getCourseCredits(){
+    public double getCourseCredits(){
         return credits;
-    }  
+    }
+    
     
     @Override
-    public abstract String toString();
-
+    public String toString(){
+        return "Course Name: " + getCourseName()
+                +"\nCourse Number: " + getCourseNumber()
+                +"\nCredits: " + getCourseCredits();
+    }
+    
 }

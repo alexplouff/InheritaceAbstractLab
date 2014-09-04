@@ -1,39 +1,50 @@
 package lab1;
 
+import javax.swing.JOptionPane;
+
 /**
- * The purpose of this class is to override the toString/prerequisite method for the Intro to Java Course
- * 
- * This Course has a prerequisite
- * 
- * @author      Alex Plouff
+ * Describe responsibilities here.
+ *
+ * @author      your name goes here
  * @version     1.00
  */
-public class IntroJavaCourse extends ProgrammingCourse  {
+public class IntroJavaCourse extends ProgrammingCourse {
+
+    private String prerequisite;
     
-    public void setCourseName(String courseName){
-                if( courseName.length() < 4 ){
-            System.out.println("Course Name Must Be Atleast Four Characters");
+    public IntroJavaCourse(String courseName, int courseNumber,     
+                                double credits , String prerequisite) {
+        super(courseName, courseNumber, credits);
+        this.prerequisite = prerequisite;
+    }
+
+    public void setPrerequisites(String prerequisite) {
+        if(prerequisite == null || prerequisite.length() == 0) {
+            JOptionPane.showMessageDialog(null,
+                    "Error: prerequisites cannot be null of empty string");
+            System.exit(0);
         }
-                this.setCourseName(courseName);
+        this.prerequisite = prerequisite;
+    }
+
+    public String getPrerequisite(){
+        return prerequisite;
     }
     
-        public void setCourseNumber(int courseNumber){
-                if( courseNumber < 100 || courseNumber > 999){
-                    System.out.println("Course Number must start higher than 100 and less than 999");
-                }
-                this.setCourseNumber(courseNumber);
-    }
-        
-    public String getPrerequisites(){
-        return "Intro To Programming, 102";
+    @Override
+    public String toString(){
+        return super.toString() + "\nPrerequisite: " + prerequisite;
     }
     
-     public String toString(){
+    public static void main(String[] args) {
+        ProgrammingCourse p = new IntroJavaCourse("Intro To Java" , 201 , 4 , "IntroToProgramming");
         
-        return 
-                "Course Name: " + getCourseName()+
-                "\nCourse Number: " + getCourseNumber()+
-                "\nCredit Amount: " + getCourseCredits()+
-                "\nPrerequistie: " + getPrerequisites();               
+        System.out.println(p);
     }
 }
+    
+    
+
+   
+
+

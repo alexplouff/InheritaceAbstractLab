@@ -1,75 +1,44 @@
 package lab2;
 
-import javax.swing.JOptionPane;
-
 /**
  * Describe responsibilities here.
  *
  * @author      your name goes here
  * @version     1.00
  */
-public class IntroJavaCourse implements ProgrammingCourse {
-    
-    private String courseName;
-    private int courseNumber;
+public class IntroJavaCourse {
+    String courseName;
+    private String courseNumber;
     private double credits;
-    private String prerequisites;       
-    
-    public void setCourseName(String courseName){
-        if( courseName.length() < 4 ){
-            System.out.println("Course Name Must Be Atleast Four Characters");
-        }
-            
+    private String prerequisites;
+
+    public IntroJavaCourse(String courseName, String courseNumber) {
         this.courseName = courseName;
-    }
-    
-    public String getCourseName(){
-        return courseName.toUpperCase();
-    }
-    
-    public void setCourseNumber(int courseNumber){
         this.courseNumber = courseNumber;
     }
-    
-    public int getCourseNumber() {
+
+    public String getCourseNumber() {
         return courseNumber;
     }
 
-    public void setPrerequisites(String prerequisites) {
-        if(prerequisites == null || prerequisites.length() == 0) {
-            JOptionPane.showMessageDialog(null,
-                    "Error: prerequisites cannot be null of empty string");
-            System.exit(0);
-        }
-        this.prerequisites = prerequisites;
+    public void setCourseNumber(String courseNumber) {
+        this.courseNumber = courseNumber;
+    }
+
+    public double getCredits() {
+        return credits;
+    }
+
+    public void setCredits(double credits) {
+        this.credits = credits;
     }
 
     public String getPrerequisites() {
         return prerequisites;
     }
-        
-    public void setCourseCredits(double credits) {
-        if(credits < 0.5 || credits > 4.0) {
-            JOptionPane.showMessageDialog(null,
-                    "Error: credits must be in the range 0.5 to 4.0");
-            System.exit(0);
-        }
-        this.setCourseCredits(credits);
-    }
-    
-    public double getCourseCredits(){
-        return credits;
-    }
-    
-    @Override
-    public String toString(){
-        
-        return 
-                "Course Name: " + getCourseName()+
-                "\nCourse Number: " + getCourseNumber()+
-                "\nCredit Amount: " + getCourseCredits()+
-                "\nPrerequistie: " + getPrerequisites();
-      
+
+    public void setPrerequisites(String prerequisites) {
+        this.prerequisites = prerequisites;
     }
 
     

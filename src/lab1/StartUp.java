@@ -9,6 +9,16 @@ package lab1;
 /**
  *
  * @author Alex
+ * What I liked about the abstract class design is that it can really save a lot
+ * of time as long as the rest of the classes are going to implement those 
+ * methods. 
+ * 
+ * What I don't like about the abstract class design is that if you're not 
+ * careful you can inherit a lot of unnecessary code if you don't keep on top 
+ * of what you're doing.
+ * 
+ * Something to look into is the abstract class constructor.
+ * 
  */
 public class StartUp {
     
@@ -32,8 +42,8 @@ public class StartUp {
          courses[1] = introToJava;
          courses[2] = advancedJava;
          
-         for(ProgrammingCourse c : courses)
-             System.out.println(c+"\n");
+         for(ProgrammingCourse course : courses)
+             System.out.println(course+"\n");
     }
         
 }

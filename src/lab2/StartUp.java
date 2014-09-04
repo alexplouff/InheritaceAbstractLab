@@ -9,6 +9,19 @@ package lab2;
 /**
  *
  * @author Alex
+ * 
+ * What I like about this architecture is that I used the constructor method
+ * to pass in my information which forces the programmer to pass in the correct 
+ * values.
+ * 
+ * What I don't like about this design is that all the necessary information 
+ * required to make this work isn't as apparent as it could/should be. For 
+ * instance, if I used the setter methods then I would know exactly what to pass
+ * in as opposed to seeing a red squiggly line telling me I did it wrong.
+ * 
+ * As far as using the Liskov substitution principle I can not think of a time
+ * when you wouldn't be able to use it. It seems like a necessary thing to use
+ * everytime because in my opinion it makes the code easier to read / understand.
  */
 public abstract class StartUp implements ProgrammingCourse {
     

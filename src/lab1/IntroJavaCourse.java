@@ -35,12 +35,7 @@ public class IntroJavaCourse extends ProgrammingCourse {
     public String toString(){
         return super.toString() + "\nPrerequisite: " + prerequisite;
     }
-    
-    public static void main(String[] args) {
-        ProgrammingCourse p = new IntroJavaCourse("Intro To Java" , 201 , 4 , "IntroToProgramming");
-        
-        System.out.println(p);
-    }
+
 }
     
     

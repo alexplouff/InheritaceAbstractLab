@@ -19,7 +19,7 @@ public abstract class ProgrammingCourse {
     private double credits;
     
     public ProgrammingCourse( String courseName , int courseNumber
-                                    , double credits){
+                                    , double credits ){
         this.courseName = courseName;
         this.courseNumber = courseNumber;
         this.credits = credits;
